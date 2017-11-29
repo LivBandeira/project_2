@@ -2,8 +2,6 @@ Project 2
 
 WMDD 4980
 
-Booth Games
-
 <p align="center">
 	<img src="./boothgames.jpg"/>
 </p>

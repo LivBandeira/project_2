@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://www.gstatic.com/firebasejs/4.5.0/firebase.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.0/buzz.min.js"></script>
+	<meta charset="UTF-8">
+	<title>Game</title>
+</head>
+<body>
+	<div id="videoBg">
+		<video poster="imgs/VideoShot.jpg" autoplay muted loop>
+			<source src="imgs/lasers.mp4" type="video/mp4">
+		</video>
+	</div>
+	<div id="home">
+		<div class="col-6">
+			<div class="logo">
+				<h1>Langara.</h1>
+				<h3>The College of Higher Learning.</h3>
+			</div>
+			<div id="form">
+				<h2>Sign Up</h2>
+				<form id="add" action="" method="post">
+					<input id="name" type="text" name="name" autofocus placeholder="Type your name">
+					<input id="initials" type="text" name="initials" placeholder="Type your initials">
+					<input id="email" type="email" name="email" placeholder="Type your email">
+					<input id="insert" type="submit" name="submit" value="Play">
+				</form>
+			</div>
+		</div> <!-- end col-6 -->
+		<div id="history" class="col-6 table vertical">
+		</div> <!-- end col-6 -->
+	</div>
+
+	<div id="game">
+		<div class="col-12">
+			<div class="client">
+				<h4>Langara.</h4>
+				<h5>The College of Higher Learning.</h5>
+			</div>
+			<div id="pregame" class="btns">
+				<button onClick="start()" id="start">Start</button>
+			</div>
+			<div id="numbers" class="btns displayNone">
+				<div class="col-12">
+					<h1 id="num">1000</h1>
+					<p>Points</p>
+				</div>
+			</div>
+			<div id="history1" class="table horizontal">	
+			</div>
+		</div> <!-- end col-12 -->
+	</div>
+
+	<div id="end">
+		<div class="col-6">
+			<div class="logo">
+				<h1>Langara.</h1>
+				<h3>The College of Higher Learning.</h3>
+			</div> 
+			<div id="endMsg">
+				<h2>Thank you for<br>participating</h2>
+				<button class="playAgain" onClick="location.reload()">New Game</button>
+			</div>
+		</div> <!-- end col-6 -->
+		<div id="history2" class="col-6 table vertical">
+		</div> <!-- end col-6 -->
+	</div>	
+
+</body>
+<script src="app.js"></script>
+</html>

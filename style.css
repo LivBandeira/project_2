@@ -1,0 +1,458 @@
+/*Langara rgb(224, 82, 6);*/
+@font-face {
+    font-family: Adelle;
+    src: url(fonts/Adelle/Adelle_Reg.otf);
+}
+
+@font-face {
+    font-family: "The Sans";
+    src: url(fonts/TheSans.ttf);
+}
+
+@font-face {
+    font-family: "Montserrat-bold";
+    src: url(fonts/Montserrat/Montserrat-ExtraBold.ttf);
+}
+@font-face {
+    font-family: "Montserrat-regular";
+    src: url(fonts/Montserrat/Montserrat-Regular.ttf);
+}
+
+html {
+	background: #000;
+}
+
+body {
+	background: url(imgs/lasers.mov);
+	padding: 0;
+	margin: 0;
+	height: 100vh;
+	width: 100vw;
+	background-size: cover;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	overflow: auto;
+}
+
+#videoBg {
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -3;
+}
+
+#videoBg video {
+	position: absolute;
+	top: 0;
+	left: 0;
+    object-fit: fill;
+    object-position: center;
+	z-index: -2;
+}
+
+#game {
+    background: rgba(63,63,63,.7);
+	height: 100vh;
+	display: flex;
+	justify-content: space-around;
+    flex-direction: column;
+    box-sizing: border-box;
+
+    border: 2px solid rgba(63,63,63,0);
+    box-shadow: inset 0px 0px 40px 20px rgba(63,63,63,0);
+}
+
+#home, #end {
+	background: radial-gradient(farthest-corner at 50% 0%,rgba(255,156,64,.6) 0%, rgba(239,91,47,.6) 50%, rgba(222,68,47,.6) 100%);
+	background-size: cover;
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	height: 100vh;
+	box-sizing: border-box;
+}
+
+.col-6 {
+	flex-basis: 45vw;
+	flex-grow: 1;
+	padding: 2rem;
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.col-12 {
+	flex-basis: 100vw;
+	padding: 4rem;
+}
+
+h1 {
+	font-family: Adelle, Arial;
+	font-size: 7rem;
+	color: #fff;
+	line-height: 1;
+	margin: .3rem 0;
+}
+
+h2 {
+	font-family: "Montserrat-bold", Arial;
+	font-size: 3rem;
+	color: #fff;
+	text-transform: uppercase;
+	font-weight: black;
+	text-align: center;
+	letter-spacing: 4px;
+}
+
+h3 {
+	font-family: "The Sans", Arial;
+	font-size: 2rem;
+	color: #000;
+	text-transform: uppercase;
+	margin: 0 0 .3rem;
+}
+
+h4 {
+	font-family: Adelle, Arial;
+	font-size: 3rem;
+	color: rgb(224, 82, 6);
+	line-height: 1;
+	margin: .3rem 0;
+}
+
+h5 {
+	font-family: "The Sans", Arial;
+	font-size: .85rem;
+	color: #fff;
+	text-transform: uppercase;
+	margin: 0 0 .3rem;
+}
+
+p {
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	color: rgb(224, 82, 6);
+	text-transform: uppercase;
+	text-align: center;
+	margin: 0;
+}
+
+.logo {
+	padding: 0 0 2rem;
+	border-bottom: 1px solid #fff;
+}
+
+#form input[type="text"],
+#form input[type="email"] {
+	width: 100%;
+	margin-bottom: 1.5rem;
+	line-height: 2;
+	padding: .7rem 1rem;
+	background: transparent;
+	border: 1px solid #fff;
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	box-sizing: border-box;
+	outline: none;
+	appearance: none;
+    -webkit-appearance: none;
+}
+
+#form input[type="text"]:focus,
+#form input[type="email"]:focus {
+	background: #fff;
+	color: rgb(224, 82, 6);
+	box-shadow: 0px 0px 15px #fff;
+	box-sizing: border-box;
+	outline: none;
+} 
+
+#form input[type="submit"], button {
+	font-family: "Montserrat-bold", Arial;
+	text-transform: uppercase;
+	font-size: 3rem;
+	color: rgb(224, 82, 6);
+	text-align: center;
+	padding: 1rem;
+	background: #fff;
+	appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+    transition: all .7s;
+    letter-spacing: 4px;
+}
+
+#form input[type="submit"]:hover, button:hover {
+	color: #fff;
+	background: rgb(224, 82, 6);
+	animation: tada 2s linear;
+	box-shadow: 0px 0px 15px rgb(224, 82, 6);
+}
+
+@keyframes tada {
+  from {
+    transform: scale3d(1, 1, 1);
+  }
+
+  10%, 20% {
+    transform: scale3d(.9, .9, .9) rotate3d(0, 0, 1, -3deg);
+  }
+
+  30%, 50%, 70%, 90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+  }
+
+  40%, 60%, 80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+  }
+
+  to {
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+::placeholder {
+	color: #fff;
+	opacity: .5;
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+input::-webkit-input-placeholder { 
+	color: #fff;
+	opacity: .5;
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+input::-moz-placeholder {
+	color: #fff;
+	opacity: .5;
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+input:-ms-input-placeholder{
+	color: #fff;
+	opacity: .5;
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+}
+
+input:focus::-webkit-input-placeholder  {
+	color: rgb(224, 82, 6);
+}
+input:focus::-moz-placeholder {
+	color: rgb(224, 82, 6);
+}
+input:focus:-ms-input-placeholder {
+	color: rgb(224, 82, 6);
+}
+
+/*   ---  Table Style  ---   */
+
+.table.vertical {
+	display: flex;
+	justify-content: flex-end;
+	flex-direction: column;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+
+table tbody {
+	border: 1px solid #fff;
+	box-sizing: inherit;
+	width: 100%;
+}
+
+table tbody tr th {
+	background: #fff;
+	color: rgb(224, 82, 6);
+	font-family: "Montserrat-bold", Arial;
+	font-size: 3rem;
+	text-transform: uppercase;
+	text-align: center;
+	padding: 1rem;
+	border-collapse: collapse;
+}
+
+table tbody tr:nth-child(odd) {
+	background: rgba(255,255,255,.1);
+}
+table tbody tr:nth-child(2) {
+	background: rgba(224,82,6,.5);
+}
+
+table tbody tr td {
+    border: 1px solid #fff;
+    text-align: left;
+    padding: 1rem 2rem;
+	font-family: "Montserrat-regular", Arial;
+	font-size: 1.5rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+
+table tbody tr td:last-child {
+	font-family: "Montserrat-bold", Arial;
+	text-align: center;
+	font-size: 2rem;
+}
+
+/*   ---  Game Screen  ---   */
+
+#game h1 {
+	font-size: 13rem;
+	margin: 0;
+}
+
+#game .col-12 {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+#pregame {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	flex-direction: row;
+}
+
+#pregame button {
+	flex-basis: 50vw;
+}
+
+#numbers {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#numbers .col-6 {
+	flex-basis: 45vw;
+	flex-grow: 1;
+}
+
+#numbers h1 {
+	text-align: center;
+	color: #ef5b2f;
+}
+
+.gameError {
+    border: 2px solid rgba(222,68,47,.7) !important;
+    box-shadow: inset 0px 0px 40px 20px rgba(222,68,47,.7) !important;
+}
+
+/*   ---  Table Style  ---   */
+
+#game table tbody {
+    display: flex;
+    justify-content: space-between;
+}
+
+#game table tbody tr:first-child {
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    flex-grow: 1;
+}
+
+#game table tbody tr {
+	flex-grow: 1;
+	display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: 1px solid #fff;
+}
+
+#game table tbody tr th {
+	font-size: 2rem;
+}
+
+#game table tbody tr td {
+	padding: 1rem;
+	border: 0;
+}
+
+/*   ---  Animation  ---   */
+
+.bounceIn {
+	animation: bounceIn 2s linear;
+}
+
+@keyframes bounceIn {
+  from, 20%, 40%, 60%, 80%, to {
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    transform: scale3d(.3, .3, .3);
+  }
+
+  10% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  30% {
+    transform: scale3d(.7, .7, .7);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  70% {
+    transform: scale3d(.7, .7, .7);
+  }
+
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale3d(1, 1, 1);
+  }
+}
+
+/*   ---  End Screen  ---   */
+
+#end .col-6:first-child {
+	display: flex;
+	flex-direction: column;
+    justify-content: space-between;
+}
+
+#endMsg button {
+	margin-top: 7rem;
+}
+
+/*   ---  Show or Hide Screens  ---   */
+
+.displayNone{
+	display: none !important;
+}

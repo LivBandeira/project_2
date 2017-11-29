@@ -1,0 +1,8 @@
+{
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "buzz": "^1.2.0",
+    "firebase": "^4.6.2"
+  }
+}
